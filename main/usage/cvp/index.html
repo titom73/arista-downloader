@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../eos/">
       
       
-        <link rel="next" href="../cvp/">
+        <link rel="next" href="../info/">
       
       
       <link rel="icon" href="../../imgs/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Get EOS package - Arista EOS Downloader</title>
+        <title>Get CVP package - Arista EOS Downloader</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#download-eos-package-from-arista-website" class="md-skip">
+        <a href="#download-cloudvision-package-from-arista-website" class="md-skip">
           Skip to content
         </a>
       
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Get EOS package
+              Get CVP package
             
           </span>
         </div>
@@ -336,6 +336,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../eos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get EOS package
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -350,7 +371,7 @@
           
   
   <span class="md-ellipsis">
-    Get EOS package
+    Get CVP package
   </span>
   
 
@@ -361,7 +382,7 @@
         
   
   <span class="md-ellipsis">
-    Get EOS package
+    Get CVP package
   </span>
   
 
@@ -381,13 +402,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#download-eos-package-from-arista-website" class="md-nav__link">
+  <a href="#download-cloudvision-package-from-arista-website" class="md-nav__link">
     <span class="md-ellipsis">
-      Download EOS package from arista website
+      Download CloudVision package from arista website
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Download EOS package from arista website">
+    <nav class="md-nav" aria-label="Download CloudVision package from arista website">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -408,27 +429,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cvp/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Get CVP package
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -850,13 +850,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#download-eos-package-from-arista-website" class="md-nav__link">
+  <a href="#download-cloudvision-package-from-arista-website" class="md-nav__link">
     <span class="md-ellipsis">
-      Download EOS package from arista website
+      Download CloudVision package from arista website
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Download EOS package from arista website">
+    <nav class="md-nav" aria-label="Download CloudVision package from arista website">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -891,50 +891,32 @@
   
 
 
-  <h1>Get EOS package</h1>
+  <h1>Get CVP package</h1>
 
-<h2 id="download-eos-package-from-arista-website">Download EOS package from arista website<a class="headerlink" href="#download-eos-package-from-arista-website" title="Permanent link">&para;</a></h2>
+<h2 id="download-cloudvision-package-from-arista-website">Download CloudVision package from arista website<a class="headerlink" href="#download-cloudvision-package-from-arista-website" title="Permanent link">&para;</a></h2>
 <p>This command gives you option to download EOS images localy. Some options are available based on image type like importing your cEOS container in your local registry</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Get latest version of EOS using docker format.</span>
-ardl<span class="w"> </span>get<span class="w"> </span>eos<span class="w"> </span>--latest<span class="w"> </span>--format<span class="w"> </span>cEOS
+<div class="highlight"><pre><span></span><code><span class="c1"># Get latest version of CVP in Vvmware format</span>
+ardl<span class="w"> </span>get<span class="w"> </span>cvp<span class="w"> </span>--latest<span class="w"> </span>--format<span class="w"> </span>ova
 
-<span class="c1"># Get latest version of maintenance type in specific branch 4.29</span>
-ardl<span class="w"> </span>get<span class="w"> </span>eos<span class="w"> </span>--branch<span class="w"> </span><span class="m">4</span>.29<span class="w"> </span>--format<span class="w"> </span>cEOS<span class="w"> </span>--release-type<span class="w"> </span>M
-
-<span class="c1"># Get a specific version</span>
-ardl<span class="w"> </span>get<span class="w"> </span>eos<span class="w"> </span>--version<span class="w"> </span><span class="m">4</span>.29.4M
-
-<span class="c1"># Get a specific version and import to docker using default arista/ceos:{version}{release_type}</span>
-ardl<span class="w"> </span>get<span class="w"> </span>eos<span class="w"> </span>--version<span class="w"> </span><span class="m">4</span>.29.4M<span class="w"> </span>--import-docker
-
-<span class="c1"># Get a specific version and import to EVE-NG</span>
-ardl<span class="w"> </span>get<span class="w"> </span>eos<span class="w"> </span>--version<span class="w"> </span><span class="m">4</span>.33.0F<span class="w"> </span>--eve-ng
+<span class="c1"># Get latest version of CVP in upgrade format</span>
+ardl<span class="w"> </span>get<span class="w"> </span>eos<span class="w"> </span>--branch<span class="w"> </span><span class="m">4</span>.29<span class="w"> </span>--format<span class="w"> </span>upgrade
 </code></pre></div>
 <h3 id="ardl-get-eos-options">ardl get eos options<a class="headerlink" href="#ardl-get-eos-options" title="Permanent link">&para;</a></h3>
 <p>Below are all the options available to get EOS package:</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ardl<span class="w"> </span>get<span class="w"> </span>eos<span class="w"> </span>--help
-Usage:<span class="w"> </span>ardl<span class="w"> </span>get<span class="w"> </span>eos<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ardl<span class="w"> </span>get<span class="w"> </span>cvp<span class="w"> </span>--help
+Usage:<span class="w"> </span>ardl<span class="w"> </span>get<span class="w"> </span>cvp<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 
-<span class="w">  </span>Download<span class="w"> </span>EOS<span class="w"> </span>image<span class="w"> </span>from<span class="w"> </span>Arista<span class="w"> </span>server.
+<span class="w">  </span>Download<span class="w"> </span>CVP<span class="w"> </span>image<span class="w"> </span>from<span class="w"> </span>Arista<span class="w"> </span>server.
 
 Options:
-<span class="w">  </span>--format<span class="w"> </span>TEXT<span class="w">        </span>Image<span class="w"> </span>format<span class="w">  </span><span class="o">[</span>default:<span class="w"> </span>vmdk<span class="o">]</span>
-<span class="w">  </span>--output<span class="w"> </span>PATH<span class="w">        </span>Path<span class="w"> </span>to<span class="w"> </span>save<span class="w"> </span>image<span class="w">  </span><span class="o">[</span>default:<span class="w"> </span>.<span class="o">]</span>
-<span class="w">  </span>--latest<span class="w">             </span>Get<span class="w"> </span>latest<span class="w"> </span>version.<span class="w"> </span>If<span class="w"> </span>--branch<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>use,<span class="w"> </span>get<span class="w"> </span>the
-<span class="w">                       </span>latest<span class="w"> </span>branch<span class="w"> </span>with<span class="w"> </span>specific<span class="w"> </span>release<span class="w"> </span><span class="nb">type</span>
-<span class="w">  </span>--eve-ng<span class="w">             </span>Run<span class="w"> </span>EVE-NG<span class="w"> </span>vEOS<span class="w"> </span>provisioning<span class="w"> </span><span class="o">(</span>only<span class="w"> </span><span class="k">if</span><span class="w"> </span>CLI<span class="w"> </span>runs<span class="w"> </span>on<span class="w"> </span>an
-<span class="w">                       </span>EVE-NG<span class="w"> </span>server<span class="o">)</span>
-<span class="w">  </span>--import-docker<span class="w">      </span>Import<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>to<span class="w"> </span><span class="nb">local</span><span class="w"> </span>docker
-<span class="w">  </span>--skip-download<span class="w">      </span>Skip<span class="w"> </span>download<span class="w"> </span>process<span class="w"> </span>-<span class="w"> </span><span class="k">for</span><span class="w"> </span>debug<span class="w"> </span>only
-<span class="w">  </span>--docker-name<span class="w"> </span>TEXT<span class="w">   </span>Docker<span class="w"> </span>image<span class="w"> </span>name<span class="w">  </span><span class="o">[</span>default:<span class="w"> </span>arista/ceos<span class="o">]</span>
-<span class="w">  </span>--docker-tag<span class="w"> </span>TEXT<span class="w">    </span>Docker<span class="w"> </span>image<span class="w"> </span>tag
-<span class="w">  </span>--version<span class="w"> </span>TEXT<span class="w">       </span>EOS<span class="w"> </span>version<span class="w"> </span>to<span class="w"> </span>download
-<span class="w">  </span>--release-type<span class="w"> </span>TEXT<span class="w">  </span>Release<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">(</span>M<span class="w"> </span><span class="k">for</span><span class="w"> </span>Maintenance,<span class="w"> </span>F<span class="w"> </span><span class="k">for</span><span class="w"> </span>Feature<span class="o">)</span>
-<span class="w">                       </span><span class="o">[</span>default:<span class="w"> </span>F<span class="o">]</span>
-<span class="w">  </span>--branch<span class="w"> </span>TEXT<span class="w">        </span>Branch<span class="w"> </span>to<span class="w"> </span>download
-<span class="w">  </span>--dry-run<span class="w">            </span>Enable<span class="w"> </span>dry-run<span class="w"> </span>mode:<span class="w"> </span>only<span class="w"> </span>run<span class="w"> </span>code<span class="w"> </span>without<span class="w"> </span>system
-<span class="w">                       </span>changes
-<span class="w">  </span>--help<span class="w">               </span>Show<span class="w"> </span>this<span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span>exit.
+<span class="w">  </span>--format<span class="w"> </span>TEXT<span class="w">   </span>Image<span class="w"> </span>format<span class="w">  </span><span class="o">[</span>default:<span class="w"> </span>ova<span class="o">]</span>
+<span class="w">  </span>--output<span class="w"> </span>PATH<span class="w">   </span>Path<span class="w"> </span>to<span class="w"> </span>save<span class="w"> </span>image<span class="w">  </span><span class="o">[</span>default:<span class="w"> </span>.<span class="o">]</span>
+<span class="w">  </span>--latest<span class="w">        </span>Get<span class="w"> </span>latest<span class="w"> </span>version.<span class="w"> </span>If<span class="w"> </span>--branch<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>use,<span class="w"> </span>get<span class="w"> </span>the<span class="w"> </span>latest
+<span class="w">                  </span>branch<span class="w"> </span>with<span class="w"> </span>specific<span class="w"> </span>release<span class="w"> </span><span class="nb">type</span>
+<span class="w">  </span>--version<span class="w"> </span>TEXT<span class="w">  </span>EOS<span class="w"> </span>version<span class="w"> </span>to<span class="w"> </span>download
+<span class="w">  </span>--branch<span class="w"> </span>TEXT<span class="w">   </span>Branch<span class="w"> </span>to<span class="w"> </span>download
+<span class="w">  </span>--dry-run<span class="w">       </span>Enable<span class="w"> </span>dry-run<span class="w"> </span>mode:<span class="w"> </span>only<span class="w"> </span>run<span class="w"> </span>code<span class="w"> </span>without<span class="w"> </span>system<span class="w"> </span>changes
+<span class="w">  </span>--help<span class="w">          </span>Show<span class="w"> </span>this<span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span>exit.
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -960,7 +942,7 @@ Options:
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 14, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2024</span>
   </span>
 
     
